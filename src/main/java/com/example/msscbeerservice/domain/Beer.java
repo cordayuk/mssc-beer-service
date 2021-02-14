@@ -1,5 +1,6 @@
 package com.example.msscbeerservice.domain;
 
+import com.example.msscbeerservice.web.model.BeerStyleEnum;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.UUID;
@@ -41,7 +42,7 @@ public class Beer {
   private Timestamp lastModifiedDate;
 
   private String beerName;
-  private String beerStyle;
+  private BeerStyleEnum beerStyle;
 
   @Column(unique = true)
   private Long upc;
