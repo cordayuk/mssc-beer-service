@@ -28,7 +28,7 @@ public class BeerLoader implements CommandLineRunner {
     {
       beerRepository.save( Beer.builder()
           .beerName("Yeungling")
-          .beerStyle(BeerStyleEnum.ALE)
+          .beerStyle(BeerStyleEnum.ALE.name())
           .quantityToBrew(50)
           .minOnHand(12)
           .upc(337010000001L)
@@ -38,7 +38,7 @@ public class BeerLoader implements CommandLineRunner {
       beerRepository.save(Beer.builder()
           .id(UUID.randomUUID())
           .beerName("Galaxy Cat")
-          .beerStyle(BeerStyleEnum.IPA)
+          .beerStyle(BeerStyleEnum.IPA.name())
           .upc(337010000002L)
           .price(new BigDecimal("5.00"))
           .build());
